@@ -33,7 +33,7 @@ x₂ is the solvent. Use Raoult's Law."
         android:textSize="15sp"
         android:textColor="#000000"
         android:id="@+id/textView11"
-        android:layout_marginTop="33dp"
+        android:layout_marginTop="33sp"
         android:layout_below="@+id/textView"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
@@ -107,7 +107,8 @@ x₂ is the solvent. Use Raoult's Law."
         android:layout_alignBottom="@+id/textView28"
         android:layout_toRightOf="@+id/textView28"
         android:layout_toEndOf="@+id/textView28"
-        android:hint="x₁" />
+        android:hint="x₁"
+        android:textSize="15sp"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -116,7 +117,8 @@ x₂ is the solvent. Use Raoult's Law."
         android:layout_alignBottom="@+id/textView29"
         android:layout_toRightOf="@+id/textView29"
         android:layout_toEndOf="@+id/textView29"
-        android:hint="x₂" />
+        android:hint="x₂"
+        android:textSize="15sp"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -125,7 +127,8 @@ x₂ is the solvent. Use Raoult's Law."
         android:layout_alignTop="@+id/textView30"
         android:layout_toRightOf="@+id/textView30"
         android:layout_toEndOf="@+id/textView30"
-        android:hint="y₁" />
+        android:hint="y₁"
+        android:textSize="15sp"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -134,7 +137,8 @@ x₂ is the solvent. Use Raoult's Law."
         android:layout_alignTop="@+id/textView31"
         android:layout_toRightOf="@+id/textView31"
         android:layout_toEndOf="@+id/textView31"
-        android:hint="y₂" />
+        android:hint="y₂"
+        android:textSize="15sp"/>
 
     <TextView
         android:layout_width="wrap_content"
