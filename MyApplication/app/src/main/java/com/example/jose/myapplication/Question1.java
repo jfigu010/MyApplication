@@ -24,6 +24,7 @@ public class Question1 extends ActionBarActivity {
         return true;
     }
 
+
     public void onButtonClick3(View v){
         EditText h = (EditText) findViewById(R.id.editText);
         EditText p2s = (EditText) findViewById(R.id.editText2);
