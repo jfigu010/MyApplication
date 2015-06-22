@@ -22,7 +22,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceSmall"
-            android:text="Two liquids (1) and (2) form an azeotrope at equal molar composition at P=760 mmHg and t=70°C. The saturation vapor pressures of (1) and (2) in units of mmHg are given by: \n \n\t\tlog P₁sat = 7.0 -1200/(t+220)\n \t\tlog P₂sat = 8.0 -1600/(t+225)\n \t\tWhere temperature t has the unit of °C.\n\n a) (30%) Estimate at the best you can parameters for α and β in van Laar&apos;s Equation.\n\n \t\tln ɣ₁ = α/(1+(α*x₁/β*x₂))^2\n \t\tln ɣ₂ = β/(1+(β*x₂/α*x₁))^2\n\n b) (30%) Using van Laar&apos;s model, predict the pressure and vapor compositions at 70°C and x₁ = 0.9."
+            android:text="Two liquids (1) and (2) form an azeotrope at equal molar composition at P=760 mmHg and t=70°C. The saturation vapor pressures of (1) and (2) in units of mmHg are given by: \n \n\t\tlog P₁sat = 7.0 -1200/(t+220)\n \t\tlog P₂sat = 8.0 -1600/(t+225)\n \t\tWhere temperature t has the unit of °C.\n\n a) (40%) Estimate at the best you can parameters for α and β in van Laar&apos;s Equation.\n\n \t\tln ɣ₁ = α/(1+(α*x₁/β*x₂))^2\n \t\tln ɣ₂ = β/(1+(β*x₂/α*x₁))^2\n\n b) (40%) Using van Laar&apos;s model, predict the pressure and vapor compositions at 70°C and x₁ = 0.9."
             android:id="@+id/textView5"
             android:scrollbars = "vertical"
             android:textColor="#000000"
@@ -45,8 +45,8 @@
             android:focusableInTouchMode="true"
             android:layout_alignBaseline="@+id/textView4"
             android:layout_alignBottom="@+id/textView4"
-            android:layout_alignLeft="@+id/editText11"
-            android:layout_alignStart="@+id/editText11" />
+            android:layout_alignRight="@+id/button4"
+            android:layout_alignEnd="@+id/button4" />
 
         <EditText
             android:layout_width="90dp"
@@ -56,11 +56,9 @@
             android:id="@+id/editText11"
             android:hint="P in mmHg"
             android:textSize="15sp"
-            android:layout_marginRight="24dp"
-            android:layout_marginEnd="24dp"
-            android:layout_below="@+id/textView22"
-            android:layout_alignRight="@+id/button4"
-            android:layout_alignEnd="@+id/button4" />
+            android:layout_below="@+id/editText10"
+            android:layout_toRightOf="@+id/textView18"
+            android:layout_toEndOf="@+id/textView18" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -69,16 +67,17 @@
             android:text="α"
             android:textSize="15sp"
             android:id="@+id/textView6"
-            android:layout_toRightOf="@+id/textView19"
-            android:layout_toLeftOf="@+id/editText11"
-            android:layout_toStartOf="@+id/editText11"
-            android:layout_above="@+id/textView7"
-            android:layout_alignTop="@+id/textView19" />
+                android:layout_alignBaseline="@+id/textView19"
+                android:layout_alignBottom="@+id/textView19"
+                android:layout_alignRight="@+id/button4"
+                android:layout_alignEnd="@+id/button4"
+                android:layout_alignLeft="@+id/textView7"
+                android:layout_alignStart="@+id/textView7" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Find alpha and Beta"
+            android:text="Find α and β"
             android:textSize="15sp"
             android:id="@+id/button4"
             android:onClick="onButtonClick"
@@ -94,12 +93,9 @@
             android:text="β"
             android:textSize="15sp"
             android:id="@+id/textView7"
-            android:layout_alignTop="@+id/textView21"
-            android:layout_alignRight="@+id/textView6"
-            android:layout_alignEnd="@+id/textView6"
-            android:layout_toRightOf="@+id/textView21"
-            android:layout_toEndOf="@+id/textView21"
-            android:layout_above="@+id/textView10" />
+                android:layout_below="@+id/textView24"
+                android:layout_alignLeft="@+id/textView17"
+                android:layout_alignStart="@+id/textView17" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -181,10 +177,10 @@
             android:text="α = "
             android:textSize="15sp"
             android:id="@+id/textView19"
+            android:layout_marginTop="21dp"
             android:layout_below="@+id/textView39"
             android:layout_toRightOf="@+id/textView4"
-            android:layout_toEndOf="@+id/textView4"
-            android:layout_marginTop="35dp" />
+            android:layout_toEndOf="@+id/textView4" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -193,10 +189,10 @@
             android:text="β = "
             android:textSize="15sp"
             android:id="@+id/textView21"
-            android:layout_below="@+id/textView19"
-            android:layout_alignRight="@+id/textView19"
-            android:layout_alignEnd="@+id/textView19"
-            android:layout_marginTop="7dp" />
+                android:layout_marginTop="16dp"
+                android:layout_below="@+id/textView19"
+                android:layout_alignRight="@+id/textView19"
+                android:layout_alignEnd="@+id/textView19" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -250,10 +246,9 @@
             android:text="T = "
             android:textSize="15sp"
             android:id="@+id/textView17"
-            android:layout_alignBaseline="@+id/textView3"
-            android:layout_alignBottom="@+id/textView3"
-            android:layout_alignLeft="@+id/textView18"
-            android:layout_alignStart="@+id/textView18" />
+            android:layout_above="@+id/editText11"
+            android:layout_toLeftOf="@+id/textView43"
+            android:layout_toStartOf="@+id/textView43" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -264,8 +259,8 @@
             android:id="@+id/textView18"
             android:layout_alignBaseline="@+id/editText11"
             android:layout_alignBottom="@+id/editText11"
-            android:layout_toLeftOf="@+id/editText11"
-            android:layout_toStartOf="@+id/editText11" />
+            android:layout_toLeftOf="@+id/editText10"
+            android:layout_toStartOf="@+id/editText10" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -283,7 +278,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="(10%) Assumptions:"
+            android:text="(20%) Assumptions:"
             android:textSize="15sp"
             android:id="@+id/textView33"
             android:layout_below="@+id/scrollView2"
@@ -300,7 +295,9 @@
             android:layout_marginTop="21dp"
             android:layout_below="@+id/textView33"
             android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" />
+            android:layout_alignParentStart="true"
+            android:layout_alignRight="@+id/checkBox2"
+            android:layout_alignEnd="@+id/checkBox2" />
 
         <CheckBox
             android:layout_width="wrap_content"
@@ -425,8 +422,8 @@
             android:textSize="15sp"
             android:layout_alignTop="@+id/textView35"
             android:layout_toRightOf="@+id/textView35"
-            android:layout_alignRight="@+id/editText10"
-            android:layout_alignEnd="@+id/editText10" />
+            android:layout_alignRight="@+id/editText11"
+            android:layout_alignEnd="@+id/editText11" />
 
         <TextView
             android:layout_width="wrap_content"

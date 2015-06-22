@@ -16,8 +16,8 @@ public class question2 extends ActionBarActivity {
     double betavalue = 0;
     double p1satvalue = 0;
     double p2satvalue = 0;
-    double xy = 0.5;
     double score = 0;
+    double xy = 0.5;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,6 +54,10 @@ public class question2 extends ActionBarActivity {
         t4.setText(gamma2azout);
         t5.setText(alphavalueout);
         t6.setText(betavalueout);
+
+        if (alphavalueout == "12.84" && betavalueout == "0.790"){
+            score = score + 40;
+        }
     }
 
     public void onButtonClick2(View v){
@@ -86,6 +90,17 @@ public class question2 extends ActionBarActivity {
         t3.setText(ptotalout);
         t4.setText(y1out);
         t5.setText(y2out);
+
+        TextView t10 = (TextView) findViewById(R.id.textView50);
+        boolean isChecked = ((CheckBox) findViewById(R.id.checkBox2)).isChecked();
+        if (isChecked) {
+            score = score + 20;
+        }
+        if (ptotalout == "737.68" && y1out == "0.89" && y2out == "0.11"){
+            score = score + 40;
+        }
+        String scoreout =  Double.toString(score);
+        t10.setText(scoreout);
     }
 
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -93,26 +108,6 @@ public class question2 extends ActionBarActivity {
         getMenuInflater().inflate(R.menu.menu_question2, menu);
         return true;
     }
-
-    private void scores(){
-        TextView t10 = (TextView) findViewById(R.id.textView50);
-        boolean isChecked = ((CheckBox) findViewById(R.id.checkBox2)).isChecked();
-        if (isChecked) {
-            score = score + 10.52;
-        }
-        String scoreout1 =  Double.toString(score);
-        t10.setText(scoreout1);
-    }
-    /*    if (alphavalue == 12.84 && betavalue == 0.790){
-            score = score + 30;
-        }
-
-        if (ptotal == 737.68 && y1 == 0.89 && y2 == 0.11){
-            score = score + 30;
-        }
-        TextView scorefinal = (TextView)findViewById(R.id.textView3);
-    }*/
-
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -125,7 +120,6 @@ public class question2 extends ActionBarActivity {
         if (id == R.id.action_settings) {
             return true;
         }
-        scores();
         return super.onOptionsItemSelected(item);
     }
 }
