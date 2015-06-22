@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -16,6 +17,7 @@ public class question2 extends ActionBarActivity {
     double p1satvalue = 0;
     double p2satvalue = 0;
     double xy = 0.5;
+    double score = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,10 +55,15 @@ public class question2 extends ActionBarActivity {
         t5.setText(alphavalueout);
         t6.setText(betavalueout);
     }
+
     public void onButtonClick2(View v){
         EditText e4 = (EditText) findViewById(R.id.editText13);
-        TextView t1 = (TextView)findViewById(R.id.textView);
-        TextView t2 = (TextView)findViewById(R.id.textView);
+        /*String input = e4.getText().toString();
+        if (input.equals(""));
+            break;
+        }*/
+        TextView t1 = (TextView)findViewById(R.id.textView47);
+        TextView t2 = (TextView)findViewById(R.id.textView48);
         TextView t3 = (TextView)findViewById(R.id.textView8);
         TextView t4 = (TextView)findViewById(R.id.textView9);
         TextView t5 = (TextView)findViewById(R.id.textView10);
@@ -68,23 +75,44 @@ public class question2 extends ActionBarActivity {
         String gamma2out = String.format("%.2f", gamma2);
         double p1 = p1satvalue*x1*gamma1;
         double p2 = p2satvalue*x2*gamma2;
-        double totalp = p1+p2;
-        String totalpout = String.format("%.2f", totalp);
-        double y1 = p1/totalp;
+        double ptotal = p1+p2;
+        String ptotalout = String.format("%.2f", ptotal);
+        double y1 = p1/ptotal;
         String y1out = String.format("%.2f", y1);
         double y2 = 1-y1;
         String y2out = String.format("%.2f", y2);
         t1.setText(gamma1out);
-        t1.setText(gamma2out);
-        t3.setText(totalpout);
+        t2.setText(gamma2out);
+        t3.setText(ptotalout);
         t4.setText(y1out);
         t5.setText(y2out);
     }
+
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_question2, menu);
         return true;
     }
+
+    private void scores(){
+        TextView t10 = (TextView) findViewById(R.id.textView50);
+        boolean isChecked = ((CheckBox) findViewById(R.id.checkBox2)).isChecked();
+        if (isChecked) {
+            score = score + 10.52;
+        }
+        String scoreout1 =  Double.toString(score);
+        t10.setText(scoreout1);
+    }
+    /*    if (alphavalue == 12.84 && betavalue == 0.790){
+            score = score + 30;
+        }
+
+        if (ptotal == 737.68 && y1 == 0.89 && y2 == 0.11){
+            score = score + 30;
+        }
+        TextView scorefinal = (TextView)findViewById(R.id.textView3);
+    }*/
+
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -97,7 +125,7 @@ public class question2 extends ActionBarActivity {
         if (id == R.id.action_settings) {
             return true;
         }
-
+        scores();
         return super.onOptionsItemSelected(item);
     }
 }
